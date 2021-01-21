@@ -38,7 +38,7 @@ router.post('/add' , multer ,   (req  ,res) => {
         })
     } else{
         const db  = new DbProduct({
-            title : req.body.title.toLowerCase(),
+            title : req.body.title ,
             price : req.body.price,
             category : req.body.category,
             comments : req.body.comments,
