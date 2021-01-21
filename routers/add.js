@@ -16,14 +16,14 @@ const md = (req,  res, next) => {
     }
 }
  
-router.get('/add' ,  md , (req  ,res) => {
+router.get('/pro/product/add' ,  md , (req  ,res) => {
         res.render('add' , {
         title: 'Mahsulot qoshish sahifasi',
 
     })
 })
 
-router.post('/add' , multer ,   (req  ,res) => {
+router.post('/pro/product/add' , multer ,   (req  ,res) => {
     req.checkBody('title' , 'Mahsulotning nomi bosh qolishi mumkin emas').notEmpty()
     req.checkBody('price' , 'Mahsulotning narxi bosh qolishi mumkin emas').notEmpty()
     req.checkBody('category' , 'Mahsulotning categorysi bosh qolishi mumkin emas').notEmpty()
